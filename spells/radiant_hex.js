@@ -16,7 +16,7 @@
 	Date:		2022-04-26 (sheet v13.1.0)
 */
 var iFileName = "radiant_hex.js";
-RequiredSheetVersion(13.1);
+RequiredSheetVersion(13);
 
 // The source (EN5ider 108)
 SourceList["HB:DnDB"] = {
