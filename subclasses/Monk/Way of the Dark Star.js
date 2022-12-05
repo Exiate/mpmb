@@ -14,7 +14,7 @@
 	Date:		2022-12-4 (sheet v13.0.0beta15)
 */
 
-var iFileName = "Monk_Way of the Dark Star.js";
+var iFileName = "Way of the Dark Star.js";
 RequiredSheetVersion(13);
 
 SourceList["UA:PDF"] = {

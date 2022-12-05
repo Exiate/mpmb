@@ -14,7 +14,7 @@
 	Date:		2022-12-04 (sheet v13.0.0beta15)
 */
 
-var iFileName = "Druid_Circle of the Hunter.js";
+var iFileName = "Circle of the Hunter.js";
 RequiredSheetVersion(13);
 
 SourceList["UA:PDF"] = {
