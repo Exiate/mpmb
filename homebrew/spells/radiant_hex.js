@@ -9,10 +9,9 @@
 /*  -INFORMATION-
 	Subject:    Spells
 	Effect:     This script adds one spell "Radiant Hex"
-
 				This spell is a flavoring of the Hex spell to use Radiant damage instead.
-
-	Code by:	MorePurpleMoreBetter
+				Original spell was created by CloneOn (this has been adapted for tweaks and flavor)
+	Code by:	Exiate
 	Date:		2022-04-26 (sheet v13.1.0)
 */
 var iFileName = "radiant_hex.js";
@@ -24,7 +23,7 @@ SourceList["HB:DnDB"] = {
 	abbreviation : "HB:DnDB",
 	abbreviationSpellsheet : "HB",
 	group : "D&D Beyond",
-	url : "https://www.dndbeyond.com/homebrew"
+	url : "https://www.dndbeyond.com/spells/967573-radiant-hex"
 };
 
 // Add the spells

@@ -10,7 +10,7 @@
 	Subject:	Subclass
 	Effect:		This script adds a subclass for the Monk, called "Way of the Dark Star"
 				This subclass has been made by /u/DarklingNinja
-	Code by:	MorePurpleMoreBetter
+	Code by:	Exiate
 	Date:		2022-12-4 (sheet v13.0.0beta15)
 */
 

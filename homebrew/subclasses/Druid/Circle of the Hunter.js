@@ -10,7 +10,7 @@
 	Subject:	Subclass
 	Effect:		This script adds a subclass for the Druid, called "Circle of the Hunter"
 				This subclass has been made by /u/VALOR DM
-	Code by:	MorePurpleMoreBetter
+	Code by:	Exiate
 	Date:		2022-12-04 (sheet v13.0.0beta15)
 */
 
