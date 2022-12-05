@@ -21,7 +21,7 @@ SourceList["UA:PDF"] = {
 	name : "Way of the Dark Star",
 	abbreviation : "UA:PDF",
 	group : "Reddit/r/UnearthedArcana",
-	url : "https://onedrive.live.com/?cid=88978CB117484868&id=88978CB117484868%2123266&parId=88978CB117484868%2111112&o=OneUp",
+	url : "https://i.redd.it/rodb7l5gmvc91.jpg",
 	date : "2022/12/04"
 };
 

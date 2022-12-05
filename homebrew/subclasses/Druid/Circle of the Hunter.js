@@ -21,7 +21,7 @@ SourceList["UA:PDF"] = {
 	name : "Circle of the Hunter",
 	abbreviation : "UA:PDF",
 	group : "Reddit/r/UnearthedArcana",
-	url : "https://onedrive.live.com/?cid=88978CB117484868&id=88978CB117484868%2123265&parId=88978CB117484868%2111112&o=OneUp",
+	url : "https://drive.google.com/file/d/1htXDI9SaVEoVEKubZM71DuqPdECzwyCq/view",
 	date : "2022/12/04"
 };
 
