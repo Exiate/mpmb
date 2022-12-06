@@ -30,6 +30,7 @@ AddSubClass("sorcerer", "aristocratic", {
 	subname : "Aristocratic",
 	source : ["KDM", 146],
 	features : {
+		/*
 		"subclassfeature1" : {
 			name : "School Mastery",
 			source : ["KDM", 146],
@@ -46,6 +47,7 @@ AddSubClass("sorcerer", "aristocratic", {
 				times : 3
 			}
 		},
+		*/
 		"subclassfeature1" : {
 			name : "Channel Energy",
 			source : ["KDM", 146],
