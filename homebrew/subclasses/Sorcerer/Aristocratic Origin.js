@@ -25,9 +25,9 @@ SourceList["KDM"] = {
 	date : "2020/01/01"
 };
 
-AddSubClass("sorcerer", "aristocratic", {
+AddSubClass("sorcerer", "aristocratic sorcerer", {
 	regExpSearch : /^(?=.*(sorcerer))(?=.*\b(aristocratic)\b).*$/i,
-	subname : "Aristocratic",
+	subname : "Aristocratic Sorcerer",
 	source : ["KDM", 146],
 	features : {
 		"subclassfeature1" : {
