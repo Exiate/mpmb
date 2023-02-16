@@ -38,8 +38,8 @@ AddSubClass("druid", "circle of the hunter", {
 			description : desc([
 				"You draw upon the primal powers of nature enhancing your natural form. As a bonus action, you can expend a use of your Wild Shape feature to empower yourself. Rather than transforming into a beast form you gain 5 temporary hit points for each level you have in this class. While this feature is active you gain the following benefits:",
 				"• When you use your strength modifier for ability checks, saving throws or on attack and damage rolls, you may use your wisdom modifier instead when attacking with unarmed strikes or weapons a druid is proficient with.",
-				"• Your melee weapon attacks made with unarmed strikes, or weapons that a druid is proficient with deal an additional ld6 damage to any target they hit.",
-				"• When you take the Attack action, you may expend one spell slot as part of the action to grant yourself ld8 temporary hit points per level of the spell slot expended.",
+				"• Your melee weapon attacks made with unarmed strikes, or weapons that a druid is proficient with deal an additional 1d6 damage to any target they hit.",
+				"• When you take the Attack action, you may expend one spell slot as part of the action to grant yourself 1d8 temporary hit points per level of the spell slot expended.",
 				"These benefits last for 10 minutes, until you are reduced to O hit points. or until you use your Wild Shape again.",
 			]),
 			calcChanges : {
