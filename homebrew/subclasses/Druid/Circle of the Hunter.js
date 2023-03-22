@@ -43,7 +43,7 @@ AddSubClass("druid", "circle of the hunter", {
 				"These benefits last for 10 minutes, until you are reduced to O hit points. or until you use your Wild Shape again.",
 			]),
 			calcChanges : {
-				atkAdd : ["if (classes.known.druid && classes.known.druid.level > 1 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Primal Might: +1d6'}; + ' damage'"]
+				atkAdd : ["if (classes.known.druid && classes.known.druid.level > 1 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Primal Might: +1d6'}; "]
 			},
 			action : ["action", ""],
 			eval : function () { RemoveAction("action", "Primal Might"); }
