@@ -41,9 +41,6 @@ AddSubClass("monk", "Way of the Dark Star", {
 				//atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Range: 60ft, Type: Force'}; "]
 				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Range : '60ft' }; "]
 			},
-			calcChanges : {
-				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Damage : [0,0,'Force'] }; "]
-			},
 		},
 		"subclassfeature1.1" : {
 			name : "Devour Energy",
