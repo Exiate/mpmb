@@ -38,8 +38,9 @@ AddSubClass("monk", "Way of the Dark Star", {
 				"Starting at the 3rd level when you choose this tradition, you are able to extend the reach of your attacks. When you do, Orbs of dark energy spring forth from your fist. When you make an ·unarmed Strike, you can instead make a ranged attack against a target you can see within 60 feet. On a hit the creature takes force damage instead of bludgeoning."
 			]),
 			calcChanges : {
-				//atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Range: 60ft, Type: Force'}; "]
-				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Range = '60ft' }; "]
+				//atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Range: 60ft; Type: Force'}; "]
+				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && (WeaponName.match(/unarmed strike/i)) {fields.Range = '60ft' }; "],
+				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && (WeaponName.match(/unarmed strike/i)) {fields.Damage_Type = 'Force' }; "]
 			},
 		},
 		"subclassfeature1.1" : {
@@ -66,7 +67,7 @@ AddSubClass("monk", "Way of the Dark Star", {
 				return n < 6 ? "" : "+1d" + (n < 11 ? 4 : n < 17 ? 8 : 12) + " damage";
 			}),
 			calcChanges : {
-				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Consuming Void: +1d' + (classes.known.monk.level < 11 ? 4 : classes.known.monk.level < 17 ? 8 : 12)} + ' damage';"]
+				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 5 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Consuming Void: +1d' + (classes.known.monk.level < 11 ? 4 : classes.known.monk.level < 17 ? 8 : 12)} + ' damage';"]
 			}
 		},
 		"subclassfeature3" : {
@@ -74,7 +75,7 @@ AddSubClass("monk", "Way of the Dark Star", {
 			source : ["UA:PDFF", 0],
 			minlevel : 11,
 			description : desc([
-				"Starting at the 11th level, when you hit a creature with an attack, you able to force them to move. You can choose to push or pull that creature 10ft.",
+				"Starting at the 11th level, when you hit a creature with an attack, you are able to force them to move. You can choose to push or pull that creature 10ft.",
 				"Additionally, you can use the deflect missile ability on non-weapon ranged attacks. However, if you choose to use deflect missile this way; you cannot spend a ki point to make a ranged attack as part of the deflect missile ability."
 			]),
 		},
@@ -86,6 +87,7 @@ AddSubClass("monk", "Way of the Dark Star", {
 				"Starting at the 17th level you can manipulate the gravitational forces around you. You gain a flying speed equal to your movement speed. When you are flying this way, you cannot be knocked prone. ",
 				"With your mastery over the force of gravity, you can create a dark singularity. You can spend 12 ki points to cast the dark star spell at the 8th level. Wisdom is your spell casting ability for this spell."
 			]),
+			speed : { fly : {spd : "walk", enc : "walk"} },
 		}
 	}
 });
