@@ -38,7 +38,7 @@ AddSubClass("monk", "Way of the Dark Star", {
 				"Starting at the 3rd level when you choose this tradition, you are able to extend the reach of your attacks. When you do, Orbs of dark energy spring forth from your fist. When you make an ·unarmed Strike, you can instead make a ranged attack against a target you can see within 60 feet. On a hit the creature takes force damage instead of bludgeoning."
 			]),
 			calcChanges : {
-				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Range = (fields.Range ? '' : '') + '60ft'} {fields.Damage_Type = (fields.Damage_Type ? '' : '') + 'Force'};"]
+				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Mod = (fields.Mod ? '' : '') + 'Dex'} {fields.Range = (fields.Range ? '' : '') + '60ft'} {fields.Damage_Type = (fields.Damage_Type ? '' : '') + 'Force'};"]
 			},
 		},
 		"subclassfeature1.1" : {
