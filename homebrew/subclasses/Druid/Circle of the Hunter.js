@@ -77,9 +77,7 @@ AddSubClass("druid", "circle of the hunter", {
 				"• You may never be surprised, and may always act in a surprise round of combat.",
 				"• If you roll initiative and have no remaining uses of your Wild shape remaining, you regain one use of your Wild Shape."
 			]),
-			addmod : [
-				{ type : "skill", field : "Init", mod : "Wis", text : "I can add my Wisdom modifier to initiative rolls." }
-			]
+			addmod : { type : "skill", field : "Init", mod : "Wis", text : "I can add my Wisdom modifier to initiative rolls." }
 		},
 		"subclassfeature4" : {
 			name : "Apex",
