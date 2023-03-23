@@ -42,13 +42,12 @@ AddSubClass("druid", "circle of the hunter", {
 				"• When you take the Attack action, you may expend one spell slot as part of the action to grant yourself 1d8 temporary hit points per level of the spell slot expended.",
 				"These benefits last for 10 minutes, until you are reduced to O hit points. or until you use your Wild Shape again.",
 			]),
-			limfeaname : "Primal Might",
+			limfeaname : "Primal Might (bonus action)",
 			usages : [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6],
 			recovery : "short rest",
 			calcChanges : {
 				atkAdd : ["if (classes.known.druid && classes.known.druid.level > 1 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Primal Might: +1d6'}; "]
-			},
-			action : [["bonus action", "Primal Might"]]
+			}
 		},
 		"subclassfeature2" : {
 			name : "Savage Ferocity",
