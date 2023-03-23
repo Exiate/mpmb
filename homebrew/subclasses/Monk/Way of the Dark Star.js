@@ -59,8 +59,11 @@ AddSubClass("monk", "Way of the Dark Star", {
 				"- All your unarmed attacks deal an additional 1d4 damage force damage. This damage increases to 1d8 at 11th level and 1d12 at 17th level. This damage is also added to your palm of the dark star attacks. ",
 				"- Creatures of your choice within 5ft must make a strength saving throw against your ki DC save in order to move away from you. At 17th level, the range of this ability increases to 10 ft. ",
 				"- You gain an additional +2 AC. This increases to +3 at 11th level and +4 at 17th level. ",
-				"You can use this ability a number of times equal to your proficiency modifier. When you finish a long, you regain any expended uses."
+				"You can use this ability a number of times equal to your proficiency modifier. When you finish a long rest, you regain any expended uses."
 			]),
+			limfeaname : "Fists of Consuming Void",
+			usages : [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6],
+			recovery : "long rest",
 			additional : levels.map(function (n) {
 				return n < 6 ? "" : "+1d" + (n < 11 ? 4 : n < 17 ? 8 : 12) + " damage";
 			}),
