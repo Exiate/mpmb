@@ -39,7 +39,7 @@ AddSubClass("monk", "Way of the Dark Star", {
 			]),
 			calcChanges : {
 				//atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Range: 60ft; Type: Force'}; "]
-				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Range ? '60ft;' : ';' } {fields.Damage_Type ? 'Force;' : ';' }"]
+				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Range = (fields.Range ? '60ft' : '' )} {fields.Damage_Type = (fields.Damage_Type ? 'Force' : '' };"]
 			},
 		},
 		"subclassfeature1.1" : {
