@@ -40,7 +40,7 @@ AddSubClass("druid", "circle of the hunter", {
 				"• When you use your strength modifier for ability checks, saving throws or on attack and damage rolls, you may use your wisdom modifier instead when attacking with unarmed strikes or weapons a druid is proficient with.",
 				"• Your melee weapon attacks made with unarmed strikes, or weapons that a druid is proficient with deal an additional 1d6 damage to any target they hit.",
 				"• When you take the Attack action, you may expend one spell slot as part of the action to grant yourself 1d8 temporary hit points per level of the spell slot expended.",
-				"These benefits last for 10 minutes, until you are reduced to O hit points. or until you use your Wild Shape again.",
+				"These benefits last for 10 minutes, until you are reduced to O hit points, or until you use your Wild Shape again.",
 			]),
 			limfeaname : "Primal Might (bonus action)",
 			usages : [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6],
@@ -54,7 +54,7 @@ AddSubClass("druid", "circle of the hunter", {
 			source : ["UA:PDF", 0],
 			minlevel : 6,
 			description : desc([
-				"On a turn in which you take the attack action, cast a druid spell or druid cantrip, you may use a bonus action to make an additional attack."
+				"On a turn in which you take the attack action, cast a druid spell, or druid cantrip; you may use a bonus action to make an additional attack."
 			]),
 		},
 		"subclassfeature2.1" : {
@@ -65,7 +65,7 @@ AddSubClass("druid", "circle of the hunter", {
 				"You gain a climbing and swimming speed equal to your walking speed."
 			]),
 			speed : { climb : {spd : "walk", enc : "walk"} },
-			speed : { swim : {spd : "walk", enc : "walk"} },
+			speed : { swim : {spd : "walk", enc : "walk"} }
 		},
 		"subclassfeature3" : {
 			name : "Hunter's Instincts", 
@@ -78,8 +78,8 @@ AddSubClass("druid", "circle of the hunter", {
 				"• If you roll initiative and have no remaining uses of your Wild shape remaining, you regain one use of your Wild Shape."
 			]),
 			addmod : [
-				{ type : "skill", field : "Init", mod : "Wis", text : "I can add my Wisdom modifier to initiative rolls." },
-			],	
+				{ type : "skill", field : "Init", mod : "Wis", text : "I can add my Wisdom modifier to initiative rolls." }
+			]
 		},
 		"subclassfeature4" : {
 			name : "Apex",
