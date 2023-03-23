@@ -45,8 +45,8 @@ AddSubClass("druid", "circle of the hunter", {
 			calcChanges : {
 				atkAdd : ["if (classes.known.druid && classes.known.druid.level > 1 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Primal Might: +1d6'}; "]
 			},
-			action : ["action", ""],
-			eval : function () { RemoveAction("action", "Primal Might"); }
+			action : ["bonus action", ""],
+			eval : function () { RemoveAction("bonus action", "Primal Might"); }
 		},
 		"subclassfeature2" : {
 			name : "Savage Ferocity",
