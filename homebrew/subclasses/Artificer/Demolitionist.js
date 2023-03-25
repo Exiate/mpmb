@@ -86,21 +86,24 @@ AddSubClass("Artificer", "Demolitionist", {
                 "Creatures in the radius of this explosion must make a Strength Saving Throw or be pushed 15 feet away from the center of the explosion and knocked prone.",
                 "Creatures must make a Constitution Saving throw or become deafened or blinded (your choice). This effectlasts for a number of rounds equal to your half your proficiency bonus rounded down. Creatures affected by this feature may repeat the saving throw at the end of their turn, ending the effect on a success."
 			])
-		}
-		//"subclassfeature5" : {
-		//	name : "Untamed Trails",
-		//	source : ["UA:PDF", 0],
-		//	minlevel : 6,
-		//	description : desc([
-		//		"You gain a climbing and swimming speed equal to your walking speed."
-		//	]),
-		//	speed : { climb : {spd : "walk", enc : "walk"} },
-		//	speed : { swim : {spd : "walk", enc : "walk"} }
-		//},
+		},
+		"subclassfeature5" : {
+			name : "Homebrew Powder",
+			source : ["UA:PDF", 0],
+			minlevel : 5,
+			description : desc([
+				"Starting at 5th level, you have learned a unique blend of ingredients to create more potent explosions. All Artificer spells & abilities that can affect an area deal 1d4 additional damage. This additional damage increases to 2d4 at 11th level, and 3d4 at 17th.",
+				"Additionally all Artificer spells spells and abilities that affect an area now deal “Siege Damage” to objects andstructures.",
+				"Siege Damage: Damage dealt to objects and structures is doubled by effects and attacks which deal Siege damage."
+			]),
+			calcChanges : {
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/explosive/i).test(fields.Description) || (/explosive/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3)} + 'd4 damage';"]
+			}
+		},
 		//"subclassfeature9" : {
 		//	name : "Hunter's Instincts", 
 		//	source : ["UA:PDF", 0],
-		//	minlevel : 10,
+		//	minlevel : 9,
 		//	description : desc([
 		//		"Your instincts are honed to the dangers around you, protecting you from ambush. You gain the following benefits:",
 		//		"• You can add your Wisdom modifiers to your initiative rolls.",
@@ -113,7 +116,7 @@ AddSubClass("Artificer", "Demolitionist", {
 		//"subclassfeature15" : {
 		//	name : "Apex",
 		//	source : ["UA:PDF", 0],
-		//	minlevel : 14,
+		//	minlevel : 15,
 		//	description : desc([
 		//		"Sharpened blades and Arrows pose little threat to you as you adopt the mantle of an apex predator. You gain the following benefits:",
 		//		"• You are immune to Poison damage and the Poisoned condition. You are also immune to disease.",
