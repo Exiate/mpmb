@@ -76,6 +76,9 @@ AddSubClass("artificer", "Demolitionist", {
 			name : "Packaged Explosives",
 			source : ["UA:PDF", 0],
 			minlevel : 3,
+			limfeaname : "Advanced Explosives",
+			usages : [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6],
+			recovery : "long rest",
 			description : desc([
 				"At 3rd level, you learn to embrace your destructive nature. Over the course of a long rest you create a satchel which magically creates all the materials you need to create basic explosives. Due to the unstable nature of these basic explosives, they are rendered inert at the end of your next turn if they are not used. You may use your reaction to set off any and all explosives of your choice within 60 feet of you.",
                 "Basic Explosives",
@@ -101,8 +104,8 @@ AddSubClass("artificer", "Demolitionist", {
 				"Siege Damage: Damage dealt to objects and structures is doubled by effects and attacks which deal Siege damage."
 			]),
 			calcChanges : {
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/basic/i).test(fields.Description) || (/basic/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"],
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/advanced/i).test(fields.Description) || (/advanced/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"]
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && (/basic/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"],
+				//atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/advanced/i).test(fields.Description) || (/advanced/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"]
 			}
 		},
 		//"subclassfeature9" : {
