@@ -113,7 +113,7 @@ AddSubClass("artificer", "Demolitionist", {
 			]),
 			action : ["bonus action", ""],
 			calcChanges : {
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 8 && (/basic/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(10ft)'} || if (classes.known.artificer && classes.known.artificer.level > 8 && (/advanced/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(15ft)'};"]
+				atkAdd : ["if ((classes.known.artificer && classes.known.artificer.level > 8 && (/basic/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(10ft)'} || if (classes.known.artificer && classes.known.artificer.level > 8 && (/advanced/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(15ft)'});"]
 			}
 		},
 		//"subclassfeature15" : {
