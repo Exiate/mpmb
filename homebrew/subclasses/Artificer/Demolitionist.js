@@ -25,10 +25,6 @@ SourceList["UA:PDF"] = {
 	date : "2023/03/25"
 };
 
-var HomebrewPowderDie = function(n) {
-	return (n < 11 ? 1 : n < 17 ? 2 : 3) + "d4";
-};
-
 WeaponsList["basic explosive"] = {
 	name : "Basic Explosive",
 	source : ["UA:PDF"],
