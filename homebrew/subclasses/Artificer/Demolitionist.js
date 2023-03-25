@@ -32,7 +32,7 @@ WeaponsList["basic explosive"] = {
 	type : "AlwaysProf",
 	ability : 0,
 	abilitytodamage : false,
-	damage : [1, 6],
+	damage : [C, 6],
 	range : "60ft",
 	defaultExcluded : false,
 	description : "Slashing, Piercing, Bludgeoning, Fire or Thunder Damage",
@@ -47,7 +47,7 @@ WeaponsList["advanced explosive"] = {
 	type : "AlwaysProf",
 	ability : 0,
 	abilitytodamage : false,
-	damage : [3, 6],
+	damage : [Q, 6],
 	range : "60ft",
 	defaultExcluded : false,
 	description : "Slashing, Piercing, Bludgeoning, Fire or Thunder Damage",
@@ -85,13 +85,7 @@ AddSubClass("Artificer", "Demolitionist", {
                 "Creatures in the radius of this explosion must make a Strength Saving Throw or be pulled towards the center of the explosion, ending this forced movement in the closest empty space.",
                 "Creatures in the radius of this explosion must make a Strength Saving Throw or be pushed 15 feet away from the center of the explosion and knocked prone.",
                 "Creatures must make a Constitution Saving throw or become deafened or blinded (your choice). This effectlasts for a number of rounds equal to your half your proficiency bonus rounded down. Creatures affected by this feature may repeat the saving throw at the end of their turn, ending the effect on a success."
-			]),
-            calcChanges : {
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 2 && ((/basic explosive/i).test(fields.Description) || (/basic explosive/i).test(WeaponName))) {fields.Damage = (fields.damage ? '' : '') + (classes.known.artificer.level < 11 ? 2 : classes.known.artificer.level < 17 ? 3 : 4)} + 'd6';"]
-			},
-            calcChanges : {
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 2 && ((/advanced explosive/i).test(fields.Description) || (/advanced explosive/i).test(WeaponName))) {fields.Damage = (fields.damage ? '' : '') + (classes.known.artificer.level < 11 ? 4 : classes.known.artificer.level < 17 ? 5 : 6)} + 'd6';"]
-			}
+			])
 		}
 		//"subclassfeature5" : {
 		//	name : "Untamed Trails",
