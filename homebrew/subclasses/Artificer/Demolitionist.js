@@ -83,44 +83,44 @@ AddSubClass("Artificer", "Demolitionist", {
 				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Damage = (fields.damage ? '' : '') + (classes.known.artificer.level > 4 < 11 ? 4 : classes.known.artificer.level > 10 < 17 ? 5 : 6)} + 'd6';"]
 			}
 		}
-//		"subclassfeature5" : {
-//			name : "Untamed Trails",
-//			source : ["UA:PDF", 0],
-//			minlevel : 6,
-//			description : desc([
-//				"You gain a climbing and swimming speed equal to your walking speed."
-//			]),
-//			speed : { climb : {spd : "walk", enc : "walk"} },
-//			speed : { swim : {spd : "walk", enc : "walk"} }
-//		},
-//		"subclassfeature9" : {
-//			name : "Hunter's Instincts", 
-//			source : ["UA:PDF", 0],
-//			minlevel : 10,
-//			description : desc([
-//				"Your instincts are honed to the dangers around you, protecting you from ambush. You gain the following benefits:",
-//				"• You can add your Wisdom modifiers to your initiative rolls.",
-//				"• You may never be surprised, and may always act in a surprise round of combat.",
-//				"• If you roll initiative and have no remaining uses of your Wild shape remaining, you regain one use of your Wild Shape."
-//			]),
-//			//addmod : { type : "ability", field : "Init", mod : "Wis", text : "I can add my Wisdom modifier to initiative rolls." }
-//			initiative: "if (classes.known.artificer && classes.known.artificer.level >= 10) { addMod(What('Wis'), 'Initiative'); };"
-//		},
-//		"subclassfeature15" : {
-//			name : "Apex",
-//			source : ["UA:PDF", 0],
-//			minlevel : 14,
-//			description : desc([
-//				"Sharpened blades and Arrows pose little threat to you as you adopt the mantle of an apex predator. You gain the following benefits:",
-//				"• You are immune to Poison damage and the Poisoned condition. You are also immune to disease.",
-//				"• While under the effects of your Primal Might feature, you gain resistance to bludgeoning, piercing and slashing damage."
-//			]),
-//			savetxt : { immune : ["poison", "disease"] },
-//			dmgres : [ 
-//				"Bludgeoning",
-//				"Piercing",
-//				"Slashing"
-//			],
-//		}
+		//"subclassfeature5" : {
+		//	name : "Untamed Trails",
+		//	source : ["UA:PDF", 0],
+		//	minlevel : 6,
+		//	description : desc([
+		//		"You gain a climbing and swimming speed equal to your walking speed."
+		//	]),
+		//	speed : { climb : {spd : "walk", enc : "walk"} },
+		//	speed : { swim : {spd : "walk", enc : "walk"} }
+		//},
+		//"subclassfeature9" : {
+		//	name : "Hunter's Instincts", 
+		//	source : ["UA:PDF", 0],
+		//	minlevel : 10,
+		//	description : desc([
+		//		"Your instincts are honed to the dangers around you, protecting you from ambush. You gain the following benefits:",
+		//		"• You can add your Wisdom modifiers to your initiative rolls.",
+		//		"• You may never be surprised, and may always act in a surprise round of combat.",
+		//		"• If you roll initiative and have no remaining uses of your Wild shape remaining, you regain one use of your Wild Shape."
+		//	]),
+		//	//addmod : { type : "ability", field : "Init", mod : "Wis", text : "I can add my Wisdom modifier to initiative rolls." }
+		//	initiative: "if (classes.known.artificer && classes.known.artificer.level >= 10) { addMod(What('Wis'), 'Initiative'); };"
+		//},
+		//"subclassfeature15" : {
+		//	name : "Apex",
+		//	source : ["UA:PDF", 0],
+		//	minlevel : 14,
+		//	description : desc([
+		//		"Sharpened blades and Arrows pose little threat to you as you adopt the mantle of an apex predator. You gain the following benefits:",
+		//		"• You are immune to Poison damage and the Poisoned condition. You are also immune to disease.",
+		//		"• While under the effects of your Primal Might feature, you gain resistance to bludgeoning, piercing and slashing damage."
+		//	]),
+		//	savetxt : { immune : ["poison", "disease"] },
+		//	dmgres : [ 
+		//		"Bludgeoning",
+		//		"Piercing",
+		//		"Slashing"
+		//	],
+		//}
 	}
 });
