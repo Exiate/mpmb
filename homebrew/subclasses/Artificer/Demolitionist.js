@@ -25,6 +25,10 @@ SourceList["UA:PDF"] = {
 	date : "2023/03/25"
 };
 
+var HomebrewPowderDie = function(n) {
+	return (n < 11 ? 1 : n < 17 ? 2 : 3) + "d4";
+};
+
 WeaponsList["basic explosive"] = {
 	name : "Basic Explosive",
 	source : ["UA:PDF"],
@@ -38,7 +42,7 @@ WeaponsList["basic explosive"] = {
 	description : "Slashing, Piercing, Bludgeoning, Fire or Thunder Damage",
 	list : "ranged",
 	dc : true,
-},
+};
 
 WeaponsList["advanced explosive"] = {
 	name : "Advanced Explosive",
@@ -53,7 +57,7 @@ WeaponsList["advanced explosive"] = {
 	description : "Slashing, Piercing, Bludgeoning, Fire or Thunder Damage",
 	list : "ranged",
 	dc : true,
-},
+};
 
 AddSubClass("artificer", "Demolitionist", {
 	regExpSearch : /^(?=.*(artificer))(?=.*\b(demo|explosive|bomb)\b).*$/i,
@@ -97,7 +101,7 @@ AddSubClass("artificer", "Demolitionist", {
 				"Siege Damage: Damage dealt to objects and structures is doubled by effects and attacks which deal Siege damage."
 			]),
 			calcChanges : {
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/explosive/i).test(fields.Description) || (/explosive/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"]
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/explosive/i).test(fields.Description) || (/explosive/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + (HomebrewPowderDie) + ' damage'};"]
 			}
 		},
 		//"subclassfeature9" : {
