@@ -25,6 +25,28 @@ SourceList["UA:PDF"] = {
 	date : "2023/03/25"
 };
 
+WeaponsList["basic explosive"] = {
+	name : "Basic Explosive",
+	defaultExcluded : false,
+	damage : [1, 6],
+	list : "ranged",
+	range : "60ft",
+	dc : true,
+	type : "AlwaysProf",
+	description : "Slashing, Piercing, Bludgeoning, Fire or Thunder Damage",
+},
+
+WeaponsList["advanced explosive"] = {
+	name : "Advanced Explosive",
+	defaultExcluded : false,
+	damage : [3, 6],
+	list : "ranged",
+	range : "60ft",
+	dc : true,
+	type : "AlwaysProf",
+	description : "Slashing, Piercing, Bludgeoning, Fire or Thunder Damage",
+},
+
 AddSubClass("Artificer", "Demolitionist", {
 	regExpSearch : /^(?=.*(artificer))(?=.*\b(demo|explosive|bomb)\b).*$/i,
 	subname : "Demolitionist",
@@ -56,31 +78,11 @@ AddSubClass("Artificer", "Demolitionist", {
                 "Creatures in the radius of this explosion must make a Strength Saving Throw or be pushed 15 feet away from the center of the explosion and knocked prone.",
                 "Creatures must make a Constitution Saving throw or become deafened or blinded (your choice). This effectlasts for a number of rounds equal to your half your proficiency bonus rounded down. Creatures affected by this feature may repeat the saving throw at the end of their turn, ending the effect on a success."
 			]),
-            WeaponsList : ["basic explosive"] = {
-                name : "Basic Explosive",
-                defaultExcluded : false,
-                damage : [1, 6],
-                list : "ranged",
-                range : "60ft",
-                dc : true,
-                type : "AlwaysProf",
-                description : "Slashing, Piercing, Bludgeoning, Fire or Thunder Damage",
-            },
             calcChanges : {
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Damage = (fields.damage ? '' : '') + (classes.known.artificer.level > 4 < 11 ? 2 : classes.known.artificer.level > 10 < 17 ? 3 : 4)} + 'd6';"]
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 2 && ((/basic explosive/i).test(fields.Description) || (/basic explosive/i).test(WeaponName))) {fields.Damage = (fields.damage ? '' : '') + (classes.known.artificer.level > 4 < 11 ? 2 : classes.known.artificer.level > 10 < 17 ? 3 : 4)} + 'd6';"]
 			},
-            WeaponsList : ["advanced explosive"] = {
-                name : "Advanced Explosive",
-                defaultExcluded : false,
-                damage : [3, 6],
-                list : "ranged",
-                range : "60ft",
-                dc : true,
-                type : "AlwaysProf",
-                description : "Slashing, Piercing, Bludgeoning, Fire or Thunder Damage",
-            },
             calcChanges : {
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 2 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Damage = (fields.damage ? '' : '') + (classes.known.artificer.level > 4 < 11 ? 4 : classes.known.artificer.level > 10 < 17 ? 5 : 6)} + 'd6';"]
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 2 && ((/advanced explosive/i).test(fields.Description) || (/advanced explosive/i).test(WeaponName))) {fields.Damage = (fields.damage ? '' : '') + (classes.known.artificer.level > 4 < 11 ? 4 : classes.known.artificer.level > 10 < 17 ? 5 : 6)} + 'd6';"]
 			}
 		}
 		//"subclassfeature5" : {
