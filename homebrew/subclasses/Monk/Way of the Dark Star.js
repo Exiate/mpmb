@@ -68,7 +68,7 @@ AddSubClass("monk", "Way of the Dark Star", {
 				return n < 6 ? "" : "+1d" + (n < 11 ? 4 : n < 17 ? 8 : 12) + " damage";
 			}),
 			calcChanges : {
-				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 5 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Consuming Void: +1d' + (classes.known.monk.level < 11 ? 4 : classes.known.monk.level < 17 ? 8 : 12)} + ' damage';"]
+				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 5 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Consuming Void: +1d' + (classes.known.monk.level < 11 ? 4 : classes.known.monk.level < 17 ? 8 : 12) + ' damage'};"]
 			}
 		},
 		"subclassfeature3" : {
