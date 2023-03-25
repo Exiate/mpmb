@@ -104,7 +104,7 @@ AddSubClass("artificer", "Demolitionist", {
 				"Siege Damage: Damage dealt to objects and structures is doubled by effects and attacks which deal Siege damage."
 			]),
 			calcChanges : {
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && (/basic/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"],
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && (/basic/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"]
 				//atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/advanced/i).test(fields.Description) || (/advanced/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"]
 			}
 		},
