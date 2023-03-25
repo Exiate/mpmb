@@ -103,19 +103,20 @@ AddSubClass("artificer", "Demolitionist", {
 				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/basic/i).test(WeaponName) || (/advanced/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"]
 			}
 		},
-		//"subclassfeature9" : {
-		//	name : "Hunter's Instincts", 
-		//	source : ["UA:PDF", 0],
-		//	minlevel : 9,
-		//	description : desc([
-		//		"Your instincts are honed to the dangers around you, protecting you from ambush. You gain the following benefits:",
-		//		"• You can add your Wisdom modifiers to your initiative rolls.",
-		//		"• You may never be surprised, and may always act in a surprise round of combat.",
-		//		"• If you roll initiative and have no remaining uses of your Wild shape remaining, you regain one use of your Wild Shape."
-		//	]),
-		//	//addmod : { type : "ability", field : "Init", mod : "Wis", text : "I can add my Wisdom modifier to initiative rolls." }
-		//	initiative: "if (classes.known.artificer && classes.known.artificer.level >= 10) { addMod(What('Wis'), 'Initiative'); };"
-		//},
+		"subclassfeature9" : {
+			name : "Bigger Explosives", 
+			source : ["UA:PDF", 0],
+			minlevel : 9,
+			description : desc([
+				"Starting at 9th level your Basic and Advanced Explosives can have their radius increased by an additional 5 feet.",
+				"Additionally, you now create and hurl a Basic Explosive as bonus action or as an action, but you are only able to use one Basic Explosive per round."
+			]),
+			action : ["bonus action", ""],
+			calcChanges : {
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && (/basic/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(10ft)' };"],
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && (/advanced/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(15ft)' };"]
+			}
+		},
 		//"subclassfeature15" : {
 		//	name : "Apex",
 		//	source : ["UA:PDF", 0],
