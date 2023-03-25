@@ -55,7 +55,7 @@ WeaponsList["advanced explosive"] = {
 	dc : true,
 },
 
-AddSubClass("Artificer", "Demolitionist", {
+AddSubClass("artificer", "Demolitionist", {
 	regExpSearch : /^(?=.*(artificer))(?=.*\b(demo|explosive|bomb)\b).*$/i,
 	subname : "Demolitionist",
 	source : ["UA:PDF", 0],
