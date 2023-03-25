@@ -102,6 +102,9 @@ AddSubClass("artificer", "Demolitionist", {
 			]),
 			calcChanges : {
 				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/basic/i).test(fields.Description) || (/basic/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"]
+			},
+			calcChanges : {
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 4 && ((/advanced/i).test(fields.Description) || (/advanced/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Homebrew Powder: +' + (classes.known.artificer.level < 11 ? 1 : classes.known.artificer.level < 17 ? 2 : 3) + 'd4 damage'};"]
 			}
 		},
 		//"subclassfeature9" : {
