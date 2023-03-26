@@ -113,11 +113,13 @@ AddSubClass("artificer", "Demolitionist", {
 			]),
 			action : ["bonus action", ""],
 			calcChanges : {
-				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 8 && (/basic/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(10ft)'}", "if (classes.known.artificer && classes.known.artificer.level > 8 && (/advanced/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(15ft)'};"]
+				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 8 && (/basic/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(10ft)'};"]
+				//atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 8 && (/advanced/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(15ft)'};"]
+				//^^^ Currently will only process one line and ignores the other
 			}
 		},
 		//"subclassfeature15" : {
-		//	name : "Apex",
+		//	name : "Bringing Down the House",
 		//	source : ["UA:PDF", 0],
 		//	minlevel : 15,
 		//	description : desc([
@@ -131,6 +133,6 @@ AddSubClass("artificer", "Demolitionist", {
 		//		"Piercing",
 		//		"Slashing"
 		//	],
-		//}
+		//}             NEED TO CONFIGURE LAST FEATURE AND ADD INFUSION
 	}
 });
