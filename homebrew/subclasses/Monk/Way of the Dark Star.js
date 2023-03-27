@@ -62,7 +62,10 @@ AddSubClass("monk", "Way of the Dark Star", {
 				"You can use this ability a number of times equal to your proficiency modifier. When you finish a long rest, you regain any expended uses."
 			]),
 			limfeaname : "Fists of Consuming Void",
-			usages : [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6],
+			//If Gestalt use
+			usages : [2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6],
+			//If NOT Gestalt
+			//usages : [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6],
 			recovery : "long rest",
 			additional : levels.map(function (n) {
 				return n < 6 ? "" : "+1d" + (n < 11 ? 4 : n < 17 ? 8 : 12) + " damage";
