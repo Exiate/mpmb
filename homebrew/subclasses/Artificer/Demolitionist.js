@@ -52,7 +52,7 @@ MagicItemsList["Magic Bomb"] = {
 		"At 11th level the damage increases to 3d6 thunder and 3d6 force, and 17th to 4d6 thunder and 4d6 force.",
 		"You make a number of magic bombs equal to half your proficiency bonus rounded up, and at the conclusion of a short rest you can remake 1 magic bomb and 1 advanced explosive if you are a Demolitionist."
 	])
-};
+}
 
 WeaponsList["magic bomb"] = {
 	name : "Magic Bomb",
