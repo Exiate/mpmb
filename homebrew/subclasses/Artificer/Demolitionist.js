@@ -45,7 +45,7 @@ MagicItemsList["Magic Bomb"] = {
 	usages : [1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3],
 	recovery : "long rest",
 	limfeaname : "Explosives Recovery",
-	usages : [1, "1 Magic Bomb and 1 Advanced Explosive"],
+	usages : 1,
 	recovery : "short rest",
 	description : desc([
 		"You infuse implosive power into an object which you can throw. As an action, you or any creature holding the Magic Bomb can throw it up to 60 feet away. Upon collision with any object or creature the magic bomb detonates affecting all creatures, objects, and structures in 20 foot radius. Each creature in this radius must make a Constitution save taking 2d6 thunder damage and 2d6 force damage and be pulled up to 10 feet towards where the magic bomb landed on a failed save or half as much damage and not pulled on a successful save. Objects & structures take double damage, and objects that aren't being held automatically fail this saving throw and fly to the center of the implosion.",
