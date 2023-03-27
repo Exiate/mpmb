@@ -29,6 +29,9 @@ SourceList["UA:PDF"] = {
 AddFeatureChoice(ClassList.artificer.features["infuse item"], true, "Magic Bomb (prereq: level 6 artificer)", {
 	name : "Magic Bomb",
 	source : ["UA:PDF"],
+	limfeaname : "Explosives Recovery",
+	usages : 1,
+	recovery : "short rest",
 	description : desc([
 		"You infuse implosive power into an object which you can throw. As an action, you or any creature holding the Magic Bomb can throw it up to 60 feet away. Upon collision with any object or creature the magic bomb detonates affecting all creatures, objects, and structures in 20 foot radius. Each creature in this radius must make a Constitution save taking 2d6 thunder damage and 2d6 force damage and be pulled up to 10 feet towards where the magic bomb landed on a failed save or half as much damage and not pulled on a successful save. Objects & structures take double damage, and objects that aren't being held automatically fail this saving throw and fly to the center of the implosion.",
 		"At 11th level the damage increases to 3d6 thunder and 3d6 force, and 17th to 4d6 thunder and 4d6 force.",
@@ -44,13 +47,13 @@ MagicItemsList["Magic Bomb"] = {
 	limfeaname : "Magic Bomb",
 	usages : [1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3],
 	recovery : "long rest",
-	limfeaname : "Explosives Recovery",
-	usages : 1,
-	recovery : "short rest",
-	description : desc([
+		descriptionFull : desc([
 		"You infuse implosive power into an object which you can throw. As an action, you or any creature holding the Magic Bomb can throw it up to 60 feet away. Upon collision with any object or creature the magic bomb detonates affecting all creatures, objects, and structures in 20 foot radius. Each creature in this radius must make a Constitution save taking 2d6 thunder damage and 2d6 force damage and be pulled up to 10 feet towards where the magic bomb landed on a failed save or half as much damage and not pulled on a successful save. Objects & structures take double damage, and objects that aren't being held automatically fail this saving throw and fly to the center of the implosion.",
 		"At 11th level the damage increases to 3d6 thunder and 3d6 force, and 17th to 4d6 thunder and 4d6 force.",
 		"You make a number of magic bombs equal to half your proficiency bonus rounded up, and at the conclusion of a short rest you can remake 1 magic bomb and 1 advanced explosive if you are a Demolitionist."
+	]),
+	description : desc([
+		"You create a number of Magic Bombs equal to your Proficiency Bonus divided by two rounded up. They deal 2d6 Thunder and 2d6 Force damage in a 20ft radius. This damage increases to 3d6 each at 11th, and 4d6 each at 17th level."
 	])
 };
 
@@ -61,7 +64,7 @@ WeaponsList["magic bomb"] = {
 	type : "AlwaysProf",
 	ability : 4,
 	abilitytodamage : false,
-	damage : ['Q', 6],
+	damage : ['C', 6],
 	range : "60ft(20ft)",
 	defaultExcluded : false,
 	description : "Thunder and Force; Vs.Con",
