@@ -40,6 +40,8 @@ AddFeatureChoice(ClassList.artificer.features["infuse item"], true, "Magic Bomb 
 	prereqeval : function(v) { return classes.known.artificer.level >= 6; },
 	magicitemsAdd : ["Magic Bomb"]
 });
+
+//Add Magic Bomb to Magic Items List
 MagicItemsList["Magic Bomb"] = {
 	name : "Magic Bomb",
 	source : ["UA:PDF"],
@@ -57,6 +59,7 @@ MagicItemsList["Magic Bomb"] = {
 	])
 };
 
+//Add Magic Bomb to Weapons list to show damage, saves, details etc.
 WeaponsList["magic bomb"] = {
 	name : "Magic Bomb",
 	source : ["UA:PDF"],
@@ -72,6 +75,7 @@ WeaponsList["magic bomb"] = {
 	dc : true
 };
 
+//Add Basic Explosive to Weapons List
 WeaponsList["basic explosive"] = {
 	name : "Basic Explosive",
 	source : ["UA:PDF"],
@@ -87,6 +91,7 @@ WeaponsList["basic explosive"] = {
 	dc : true,
 };
 
+//Add Advanced Explosive to Weapons List
 WeaponsList["advanced explosive"] = {
 	name : "Advanced Explosive",
 	source : ["UA:PDF"],
