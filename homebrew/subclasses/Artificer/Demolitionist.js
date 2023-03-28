@@ -166,8 +166,6 @@ AddSubClass("artificer", "demolitionist", {
 			action : ["bonus action", ""],
 			calcChanges : {
 				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 8 && (/basic/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(10ft)'};"]
-				//atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 8 && (/advanced/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(15ft)'};"]
-				//^^^ Currently will only process one line and ignores the other
 			}
 		},
 		"subclassfeature9.1" : {
@@ -179,9 +177,7 @@ AddSubClass("artificer", "demolitionist", {
 				"Additionally, you now create and hurl a Basic Explosive as bonus action or as an action, but you are only able to use one Basic Explosive per round."
 			]),
 			calcChanges : {
-				//atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 8 && (/basic/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(10ft)'};"]
 				atkAdd : ["if (classes.known.artificer && classes.known.artificer.level > 8 && (/advanced/i).test(WeaponName)) {fields.Range = (fields.Range ? '' : '') + '60ft(15ft)'};"]
-				//^^^ Currently will only process one line and ignores the other
 			}
 		},
 		"subclassfeature15" : {
