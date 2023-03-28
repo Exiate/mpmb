@@ -9,15 +9,13 @@
 	Subject:	Class
 	Effect:		This script adds the class called "Spellslinger"
     Created by: Mitchell Turnbull
-    Code by:	/u/Exiate
+    Code by:	https://github.com/Exiate
 	Date:		2022-12-05
 	Please support the creator of this content (DawnforgedCast) and download their material from their website: http://dawnforgedcast.org/
 */
 
 /*	-IMPORTANT NOTICE-
-	This code has not been corrected by MPMB to his usual rigid standards. He only corrected errors in the code, but hasn't compared the content to the original source.
-	Things will not look as polished as with the other pre-written code that you can find in the same folder. For example, descriptions for class features will overflow their allowed space.
-	Also, automation for spell selection isn't fully functional for several of the subclass features.
+	This code has not been corrected by MPMB to his usual rigid standards. 
 */
 
 var iFileName = "Spellslinger.js";

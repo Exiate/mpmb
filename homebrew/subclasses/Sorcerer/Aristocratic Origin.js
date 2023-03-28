@@ -10,7 +10,7 @@
 	Subject:	Subclass
 	Effect:		This script adds a subclass for the Sorcerer, called "Aristocratic"
 				This is taken from the 'Kobold Press - Deep Magic' created by Dan Dillon, Jeff Lee, and Chris Harris
-	Code by:	/u/Exiate
+	Code by:	https://github.com/Exiate
 	Date:		2022-12-05
 */
 

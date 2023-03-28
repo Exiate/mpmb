@@ -11,7 +11,7 @@
 	Effect:     This script adds one spell "Radiant Hex"
 				This spell is a flavoring of the Hex spell to use Radiant damage instead.
 				Original spell was created by CloneOn (this has been adapted for tweaks and flavor)
-	Code by:	Exiate
+	Code by:	https://github.com/Exiate
 	Date:		2022-04-26 (sheet v13.1.0)
 */
 var iFileName = "radiant_hex.js";

@@ -10,8 +10,8 @@
 	Subject:	Subclass
 	Effect:		This script adds a subclass for the Artificer, called "Demolitionist"
 				This subclass has been made by GM Binder
-	Code by:	Exiate
-	Date:		2023/03/25 (sheet v13.0.0beta15)
+	Code by:	https://github.com/Exiate
+	Date:		2023/03/28 (sheet v13.0.0beta15)
 */
 
 var iFileName = "Demolitionist.js";
