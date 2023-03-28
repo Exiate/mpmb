@@ -170,8 +170,8 @@ AddSubClass("artificer", "demolitionist", {
 				//^^^ Currently will only process one line and ignores the other
 			}
 		},
-		"subclassfeature9" : {
-			name : "Bigger AExplosives", 
+		"subclassfeature9.1" : {
+			name : "Bigger AExplosives 2", 
 			source : ["UA:PDF", 0],
 			minlevel : 9,
 			description : desc([
