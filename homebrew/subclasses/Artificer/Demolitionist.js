@@ -21,8 +21,8 @@ SourceList["UA:PDF"] = {
 	name : "Demolitionist",
 	abbreviation : "UA:PDF",
 	group : "Reddit/r/UnearthedArcana",
-	url : "https://drive.google.com/file/d/1htXDI9SaVEoVEKubZM71DuqPdECzwyCq/view",
-	date : "2023/03/25"
+	url : "https://drive.google.com/file/d/1-rInVC6FNGl3zU26lrcxvHDEejvT2n4u/view",
+	date : "2023/03/28"
 };
 
 // New Artificer Infusions
