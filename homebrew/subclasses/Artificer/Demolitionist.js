@@ -139,7 +139,7 @@ AddSubClass("artificer", "demolitionist", {
                 "In addition to the damage for your Advanced Explosives, select one of the following options as an added effect.",
                 "Creatures in the radius of this explosion must make a Strength Saving Throw or be pulled towards the center of the explosion, ending this forced movement in the closest empty space.",
                 "Creatures in the radius of this explosion must make a Strength Saving Throw or be pushed 15 feet away from the center of the explosion and knocked prone.",
-                "Creatures must make a Constitution Saving throw or become deafened or blinded (your choice). This effectlasts for a number of rounds equal to your half your proficiency bonus rounded down. Creatures affected by this feature may repeat the saving throw at the end of their turn, ending the effect on a success."
+                "Creatures must make a Constitution Saving throw or become deafened or blinded (your choice). This effect lasts for a number of rounds equal to your half your proficiency bonus rounded down. Creatures affected by this feature may repeat the saving throw at the end of their turn, ending the effect on a success."
 			])
 		},
 		"subclassfeature5" : {
@@ -148,7 +148,7 @@ AddSubClass("artificer", "demolitionist", {
 			minlevel : 5,
 			description : desc([
 				"Starting at 5th level, you have learned a unique blend of ingredients to create more potent explosions. All Artificer spells & abilities that can affect an area deal 1d4 additional damage. This additional damage increases to 2d4 at 11th level, and 3d4 at 17th.",
-				"Additionally all Artificer spells spells and abilities that affect an area now deal “Siege Damage” to objects andstructures.",
+				"Additionally all Artificer spells spells and abilities that affect an area now deal “Siege Damage” to objects and structures.",
 				"Siege Damage: Damage dealt to objects and structures is doubled by effects and attacks which deal Siege damage."
 			]),
 			calcChanges : {
