@@ -30,12 +30,13 @@ AddSubClass("ranger", "The Naturalist", {
 	subname : "The Naturalist",
 	source : ["UA:PDFF", 0],
 	features : {
-		"subclassfeature1" : {
+		"subclassfeature3.1" : {
 			name : "Naturlist Magic",
 			source : ["UA:PDF"],
 			minlevel : 3,
 			description : desc([
-				"You learn the druidcraft cantrip if you haven't already. You also learn an additional spell when you reach certain levels in this class, as shown in the Naturalist Spells table. Each spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know."
+				"You learn the druidcraft cantrip if you haven't already. You also learn an additional spell when you reach certain levels in this class, as shown in the Naturalist Spells table. Each spell counts ",
+				"as a ranger spell for you, but it doesn't count against the number of ranger spells you know."
 			]),
 			action : ["action", " (ignite)"],
 			spellcastingBonus : {
@@ -44,13 +45,15 @@ AddSubClass("ranger", "The Naturalist", {
 			},
             spellcastingExtra : ["sanctuary", "continual flame", "create food and water", "find greater steed", "awaken"]
 		},
-		"subclassfeature1.1" : {
+		"subclassfeature3.2" : {
 			name : "Herbal Brewer",
 			source : ["UA:PDFF", 0],
 			minlevel : 3,
 			description : desc([
-				"Your time spent studying and living in nature has made you an expert in using nature to heal others. You gain proficiency in the herbalism kit if you haven't already. You also gain proficiency in one of the following skills: Medicine, Nature, or Survival, ",
-                "In addition, once a day, as part of a short or long rest, you can spend 1 hour foraging and use your herbalism kit to create a potion of healing. You can create a number of these potions equal to your proficiency bonus, which last until the end of your next long rest. When you reach 9th level in this class, you can expend three uses of this feature to create a potion of superior healing."
+				"Your time spent studying and living in nature has made you an expert in using nature to heal others. You gain proficiency in the herbalism kit if you haven't already. You also gain proficiency in ",
+				"one of the following skills: Medicine, Nature, or Survival. In addition, once a day, as part of a short or long rest, you can spend 1 hour foraging and use your herbalism kit to create a potion of ",
+				"healing. You can create a number of these potions equal to your proficiency bonus, which last until the end of your next long rest. When you reach 9th level in this class, you can expend three uses ",
+				"of this feature to create a potion of superior healing."
 			]),
 			limfeaname : "Herbal Brewer",
 			usages : [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6],
@@ -58,50 +61,53 @@ AddSubClass("ranger", "The Naturalist", {
             toolProfs : ["Herbalism kit"],
             skillstxt : "Choose one from Medicine, Nature, or Survival",
         },
-		/*
-        "subclassfeature1.2" : {
+        "subclassfeature3.3" : {
 			name : "Wildlife Whisperer",
 			source : ["UA:PDFF", 0],
 			minlevel : 3,
 			description : desc([
-				"Beginning at the 6th level you can harness the power of the void. As a bonus action, you condense gravity into orbs of force in your hands. For the next minute spheres of swirling void cover your hands. During this time, you gain the following benefits. ",
-				"- All your unarmed attacks deal an additional 1d4 damage force damage. This damage increases to 1d8 at 11th level and 1d12 at 17th level. This damage is also added to your palm of the dark star attacks. ",
-				"- Creatures of your choice within 5ft must make a strength saving throw against your ki DC save in order to move away from you. At 17th level, the range of this ability increases to 10 ft. ",
-				"- You gain an additional +2 AC. This increases to +3 at 11th level and +4 at 17th level. ",
-				"You can use this ability a number of times equal to your proficiency modifier. When you finish a long rest, you regain any expended uses."
+				"You have the ability to communicate with creatures of the natural world. As an action, you can choose a beast or plant creature you can see within 30 feet of you. The target must make a Wisdom saving ",
+				"throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you for up to 1 hour or until you or your companions do anything harmful to it. ",
+				"You can dismiss the effect early as a bonus action. While the creature is charmed in this way, it regards you as a friendly companion and you gain the ability to comprehend and telepathically communicate ",
+				"with each other. When this effect ends, the creature knows it was charmed by you. Once you use this feature, you can't use it again until you finish a short or long rest."
 			]),
-			limfeaname : "Fists of Consuming Void",
-			//If Gestalt use
-			usages : [2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6],
-			//If NOT Gestalt
-			//usages : [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6],
-			recovery : "long rest",
-			additional : levels.map(function (n) {
-				return n < 6 ? "" : "+1d" + (n < 11 ? 4 : n < 17 ? 8 : 12) + " damage";
-			}),
-			calcChanges : {
-				atkAdd : ["if (classes.known.monk && classes.known.monk.level > 5 && ((/unarmed/i).test(fields.Description) || (/unarmed/i).test(WeaponName))) {fields.Description += (fields.Description ? '; ' : '') + 'Consuming Void: +1d' + (classes.known.monk.level < 11 ? 4 : classes.known.monk.level < 17 ? 8 : 12) + ' damage'};"]
-			}
+			limfeaname : "Wildlife Whisperer",
+			action : ["action", ""],
+			recovery : "short rest"
 		},
-		"subclassfeature3" : {
-			name : "Repulsion and Attraction",
+		"subclassfeature7.1" : {
+			name : "Natural Awareness",
+			source : ["UA:PDFF", 0],
+			minlevel : 7,
+			description : desc([
+				"Your keen awareness of the natural world allows you to tap into its power. You can cast each of the spells in your Naturalist Magic feature once without expending a spell slot. Once you cast a spell in ",
+				"this way, you can't do so again until you finish a long rest."
+			]),
+			recovery : "long rest"
+		},
+		"subclassfeature11.1" : {
+			name : "Bestial Connection",
 			source : ["UA:PDFF", 0],
 			minlevel : 11,
 			description : desc([
-				"Starting at the 11th level, when you hit a creature with an attack, you are able to force them to move. You can choose to push or pull that creature 10ft.",
-				"Additionally, you can use the deflect missile ability on non-weapon ranged attacks. However, if you choose to use deflect missile this way; you cannot spend a ki point to make a ranged attack as part of the deflect missile ability."
+				"You can call upon the animals of nature to aid you: you know summon beast. It doesn't count against the number of ranger spells you know, and you can cast it without a material component. You can also ",
+				"cast it once without a spell slot, and you regain the ability to do so when you finish a long rest. Whenever you start casting the spel\ you can modify it so that it doesn't require concentration. If you ",
+				"do so, the spell's duration becomes 1 minute for that casting."
 			]),
+			spellcastingBonus : {
+				name : "Bestial Connection",
+				spells : ["summon beast"],
+			},
+			recovery : "long rest"
 		},
-		"subclassfeature4" : {
-			name : "Center  of Gravity",
+		"subclassfeature15.1.1" : {
+			name : "Nature's Concoction",
 			source : ["UA:PDFF", 0],
-			minlevel : 17,
+			minlevel : 15,
 			description : desc([
-				"Starting at the 17th level you can manipulate the gravitational forces around you. You gain a flying speed equal to your movement speed. When you are flying this way, you cannot be knocked prone. ",
-				"With your mastery over the force of gravity, you can create a dark singularity. You can spend 12 ki points to cast the dark star spell at the 8th level. Wisdom is your spell casting ability for this spell."
-			]),
-			speed : { fly : {spd : "walk", enc : "walk"} },
+				"The herbal potions you create have increased efficacy. When you create a potion of healing with your Herbal Brewer feature, you can choose from the following damage types: acid, cold, fire, lightning, thunder. ",
+				"A creature that ingests the potion gains resistance to the chosen damage type for 1 hour."
+			])
 		}
-		*/
 	}
 });
