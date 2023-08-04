@@ -11,7 +11,7 @@
 	Effect:		This script adds a subclass for the Ranger, called "The Naturalist"
 				This subclass has been made by unknown.
 	Code by:	https://github.com/Exiate
-	Date:		04AUG2023 (sheet v13.0.0beta15)
+	Date:		2023/08/04 (sheet v13.0.0beta15)
 */
 
 var iFileName = "The Naturalist.js";
