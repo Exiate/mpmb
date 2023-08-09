@@ -34,9 +34,11 @@ AddSubClass("barbarian", "Path of Brawn", {
 			source : ["UA:PDFF", 0],
 			minlevel : 3,
 			description : desc([
-				"While raging, you are able to wield a two-handed weapon in one hand. If wielding a two-handed weapon in each hand, your off-hand attack can be taken as a bonus action. Strength increases by 1 to a max of 21."
+				"While raging, you are able to wield a two-handed weapon in one hand. If wielding a two-handed weapon in each hand, your off-hand attack can be taken as part of your attack action. Strength increases by 1 to a max of 21."
 			]),
-			scores : [1, 0, 0, 0, 0, 0]
+			action : ["action", "Strength of Mountains"],
+			scores : [1, 0, 0, 0, 0, 0],
+			scoresMaximum : [21, 0, 0, 0, 0, 0]
 		},
 		"subclassfeature6" : {
 			name : "Empowered Resistance",
@@ -46,7 +48,8 @@ AddSubClass("barbarian", "Path of Brawn", {
 				"While raging, you have resistance to all damage except psychic damage. Strength increases by 1 to a max of 22."
 			]),
 			dmgres : [["All -Psychic", "All -Psychic (rage)"]],
-			scores : [1, 0, 0, 0, 0, 0]
+			scores : [1, 0, 0, 0, 0, 0],
+			scoresMaximum : [22, 0, 0, 0, 0, 0]
 		},
 		"subclassfeature9" : {
 			name : "Bounding Might",
@@ -56,17 +59,19 @@ AddSubClass("barbarian", "Path of Brawn", {
 				"Upon reaching 9th level, your physical strength increases your movement speed by 10ft. Additionally, you may take the dash action as a bonus action. Strength increases by 1 to a max of 23."
 			]),
 			speed : { allModes : "+10" },
-			action : ["bonus action", " (Dash)"],
-			scores : [1, 0, 0, 0, 0, 0]
+			action : ["bonus action", "(Dash)"],
+			scores : [1, 0, 0, 0, 0, 0],
+			scoresMaximum : [23, 0, 0, 0, 0, 0]
 		},
-		"subclassfeature11" : {
+		"subclassfeature12" : {
 			name : "Brutal",
 			source : ["UA:PDFF", 0],
-			minlevel : 11,
+			minlevel : 12,
 			description : desc([
 				"While raging, and when using reckless attack, you may forgo any advantage received and take a -5 to hit. If you do and your attack hits, the hit is automatically counted as a critical strike. Strength increases by 1 to a max of 24."
 			]),
-			scores : [1, 0, 0, 0, 0, 0]
+			scores : [1, 0, 0, 0, 0, 0],
+			scoresMaximum : [24, 0, 0, 0, 0, 0]
 		}
 	}
 });
