@@ -48,7 +48,7 @@ AddSubClass("barbarian", "Path of Brawn", {
 				"While raging, you have resistance to all damage except psychic damage. Strength increases by 1 to a max of 22."
 			]),
 			dmgres : [["All -Psychic", "All -Psychic (rage)"]],
-			eval : function() {
+			eval : function() { //Removes dmgres from base class
 					processResistance(false, 'Barbarian: Rage', ClassList.barbarian.features.rage.dmgres);
 				},
 			scores : [1, 0, 0, 0, 0, 0],
