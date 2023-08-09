@@ -67,6 +67,6 @@ AddSubClass("barbarian", "Path of Brawn", {
 				"While raging, and when using reckless attack, you may forgo any advantage received and take a -5 to hit. If you do and your attack hits, the hit is automatically counted as a critical strike. Strength increases by 1 to a max of 24."
 			]),
 			scores : [1, 0, 0, 0, 0, 0]
-		},
-	},
-})
+		}
+	}
+});
