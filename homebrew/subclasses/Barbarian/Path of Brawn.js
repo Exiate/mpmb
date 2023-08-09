@@ -68,5 +68,5 @@ AddSubClass("barbarian", "Path of Brawn", {
 			]),
 			scores : [1, 0, 0, 0, 0, 0]
 		},
-    },
+	},
 })
