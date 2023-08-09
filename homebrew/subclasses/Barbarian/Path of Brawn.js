@@ -48,6 +48,9 @@ AddSubClass("barbarian", "Path of Brawn", {
 				"While raging, you have resistance to all damage except psychic damage. Strength increases by 1 to a max of 22."
 			]),
 			dmgres : [["All -Psychic", "All -Psychic (rage)"]],
+			eval : function() {
+					processResistance(false, 'Barbarian: Rage', ClassList.barbarian.features.rage.dmgres);
+				},
 			scores : [1, 0, 0, 0, 0, 0],
 			scoresMaximum : [22, 0, 0, 0, 0, 0]
 		},
@@ -72,6 +75,15 @@ AddSubClass("barbarian", "Path of Brawn", {
 			]),
 			scores : [1, 0, 0, 0, 0, 0],
 			scoresMaximum : [24, 0, 0, 0, 0, 0]
+		},
+		"subclassfeature20" : {
+			name : "Indomitable",
+			source : ["UA:PDFF", 0],
+			minlevel : 20,
+			description : desc([
+				"At 20th level, Your max strength increases to 28."
+			]),
+			scoresMaximum : [28, 0, 0, 0, 0, 0]
 		}
 	}
 });
